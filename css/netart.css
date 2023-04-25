@@ -110,7 +110,6 @@
     display: block;
     height: 44px;
     width: 47px;
-    background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
     background-size: 20px 20px;
     background-repeat: no-repeat;
     z-index: 16;
@@ -128,7 +127,7 @@
     height: 2.5em;
     margin: 1em;
     border-radius: 50%;
-    background-image: url(https://www.coothead.co.uk/images/play-pause-button.png);
+   
     background-size: 100% auto;
     cursor: pointer;
  }

@@ -1,33 +1,18 @@
-( function( d ) {
-  'use strict';
-
-   var test = true,
-       but = d.querySelector( '#button' ),
-       aud = d.querySelector( '#player' );
-       aud.classList.add( 'remove' );
-       d.querySelector( '#button-container' ).classList.remove( 'hide' );
-
-   but.addEventListener('click',
-      function() {
-         if ( test === true ) {
-              but.classList.add( 'pause' );
-              test = false;
-              aud.play();
-         }
-         else {
-              changeSVG();
-              aud.pause();
-         }
-      }, false );
-
-   aud.addEventListener( 'ended',
-      function() {
-         changeSVG();
-         aud.load();
-       }, false );
-
-   function changeSVG() {
-      but.classList.remove( 'pause' );
-      test = true;
-    }
- }( document ));
+function setup() {
+    createCanvas(710, 400);
+    background(102);
+  }
+  
+  function draw() {
+   
+    variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+  }
+  
+  
+  
+  function variableEllipse(x, y, px, py) {
+    let speed = abs(x - px) + abs(y - py);
+    stroke(speed);
+    ellipse(x, y, speed, speed);
+  }
+  
